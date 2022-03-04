@@ -4,23 +4,22 @@
 Namespace по умолчанию ds.test.impl
 При подключении данной библиотеки в данном Namespace должны быть доступны 1 интерфейс
 IPlugin и один статический класс Plugins:
-public interface IPlugin
+<p> public interface IPlugin </p>
 {
-string PluginName { get; }
-string Version { get; }
-System.Drawing.Image Image { get; }
-string Description { get; }
-int Run (int input1, int input2);
+ <p> string PluginName { get; }</p>
+  <p>string Version { get; }</p>
+  </p>System.Drawing.Image Image { get; }</p>
+  <p>string Description { get; }</p>
+  <p>int Run (int input1, int input2);</p>
 }
-
-Статический класс Plugins должен реализовывать интерфейс:
-interface PluginFactory
+<p>Статический класс Plugins должен реализовывать интерфейс:</p>
+<p>interface PluginFactory</p>
 {
-int PluginsCount { get; }
-string[] GetPluginNames { get; }
-IPlugin GetPlugin (string pluginName);
+<p>int PluginsCount { get; }</p>
+<p>string[] GetPluginNames { get; }</p>
+<p>IPlugin GetPlugin (string pluginName);</p>
 }
-
+<p></p>
 Часть реализаций интерфейса IPlugin должна быть унаследована от закрытого абстрактного
 класса
 Метод Run должен реализовывать различные математические функции (сложение умножение и
